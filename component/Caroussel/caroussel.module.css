@@ -1,17 +1,56 @@
 
+.contain_carousel{
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 10%;
+
+}
+
 .carousel-item {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  
-  .carousel-item .image_carousel {
-    max-width: 50%;
-    margin-left: 10px;
-  }
-  
-  .carousel-item .carousel-caption {
-    max-width: 50%;
-    text-align: left;
-    margin-right: 10px;
-  }
+  display: flex;
+  align-items: center;
+}
+
+.carousel-item .image_carousel {
+  width: 50%;
+  height: auto;
+
+}
+
+
+.carrousel_text {
+  width: 50%;
+  text-align: left;
+  padding-left: 30px;
+  align-items: center;
+  display: flex;
+}
+
+.carrousel_bouton{
+  background-color: rgb(50, 143, 123);
+  color: white;
+  transition: 0.3s ease;
+  border: none;
+border-radius: 5px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: end;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 7px;
+}
+
+.carousel-control-next-icon{
+color: green;
+
+}
+
+.carrousel_bouton{
+  z-index: 2;
+  margin-left: 5px;
+}
+
+.mini_titre{
+  color: rgb(50, 143, 123);
+}

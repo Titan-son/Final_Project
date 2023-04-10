@@ -81,6 +81,10 @@
     cursor: pointer;
 }
 
+.menu_item:hover{
+    color: #2f4858;
+}
+
 /* bouton de fermeture  */
 .zone_titre{
     display: flex;

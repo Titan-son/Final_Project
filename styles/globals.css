@@ -2,3 +2,40 @@ body{
   margin: 0;
 
 }
+
+.carousel-control-next-icon{
+background-color: rgb(50, 143, 123);
+border-radius: 50%;
+display: flex;
+background-size: 0.9em !important;
+
+}
+
+.carousel-control-prev-icon{
+
+  background-color: rgb(50, 143, 123);
+  border-radius: 50%;
+  display: flex;
+  background-size: 0.9em !important;
+
+}
+
+.carousel-indicators button{
+  
+  background-color: rgb(154, 154, 154) !important;
+  height: 15px !important;
+  width: 15px !important;
+  border-radius: 50% !important;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  transition: 0.4s ease !important;
+}
+
+
+.carousel-indicators .active {
+  width: 40px !important;
+  background-color: rgb(50, 143, 123) !important ;
+  /* border-left: 20px !important;
+  border-right: 20px !important; */
+  border-radius: 15px !important;
+}

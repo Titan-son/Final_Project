@@ -29,7 +29,7 @@ export default function Home({allJsonData}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar/>
-      {/* <Caroussel/> */}
+      <Caroussel/>
     <Community/>
       <Footer/>
     </>
