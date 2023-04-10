@@ -1,0 +1,17 @@
+
+.carousel-item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .carousel-item .image_carousel {
+    max-width: 50%;
+    margin-left: 10px;
+  }
+  
+  .carousel-item .carousel-caption {
+    max-width: 50%;
+    text-align: left;
+    margin-right: 10px;
+  }
