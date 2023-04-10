@@ -5,10 +5,21 @@ import styles from '@/styles/Home.module.css'
 import Navbar from '@/component/navbar/navbar'
 import Caroussel from '@/component/Caroussel/caroussel'
 import Footer from '@/component/Footer/Footer'
+import Community from '@/component/Community/Community'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export async function getStaticProps() {
+  const allJsonData = await fetch('https://example-data.draftbit.com/books')
+    .then(r => r.json())
+  return {
+    props: {
+      allJsonData
+    },
+  };
+}
+
+export default function Home({allJsonData}) {
   return (
     <>
       <Head>
@@ -19,7 +30,7 @@ export default function Home() {
       </Head>
       <Navbar/>
       {/* <Caroussel/> */}
-      
+    <Community/>
       <Footer/>
     </>
   )
