@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   padding: 50px 10%;
+  background-color: #f8f9fa;
 
 }
 
@@ -41,10 +42,6 @@ border-radius: 5px;
   padding: 7px;
 }
 
-.carousel-control-next-icon{
-color: green;
-
-}
 
 .carrousel_bouton{
   z-index: 2;

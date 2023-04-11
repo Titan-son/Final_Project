@@ -4,6 +4,7 @@ import { RxCross2 } from "react-icons/rx";
 import { HiOutlineMagnifyingGlass } from "react-icons/hi2";
 import { FiPhoneCall } from "react-icons/fi";
 import { BsBag } from "react-icons/bs";
+import { AiFillHeart } from "react-icons/ai";
 
 
 
@@ -21,6 +22,12 @@ export default function Navbar() {
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
+    };
+
+    const [isOpenFavoris, setIsOpenFavoris] = useState(false);
+
+    const toggleFavoris = () => {
+        setIsOpenFavoris(!isOpenFavoris);
     };
 
     return (
@@ -60,9 +67,16 @@ export default function Navbar() {
                     <FiPhoneCall className={styles.logo}/>
                 </span>
                 <a href="tel:+33711223344"> 07 11 22 33 44</a>
-                <span>
-                    <BsBag className={styles.logo2}/>
+                <span onClick={toggleFavoris}>
+                    <AiFillHeart  className={styles.logo2}/>
                 </span>
+                <div className={isOpenFavoris ? styles.favoris + ' ' + styles.open : styles.favoris}>
+                    <div className={styles.zone_titre}>
+                        <h2>FAVORIS</h2>
+                        <CloseButton onClick={toggleFavoris} />
+                    </div>
+
+                </div>
                 
             </div>
         </div>

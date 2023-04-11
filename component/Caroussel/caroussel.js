@@ -7,7 +7,7 @@ import styles from './caroussel.module.css'
 export default function Caroussel() {
   return (
     <Carousel>
-      <Carousel.Item interval={1000000} >
+      <Carousel.Item interval={1000} >
         <div className={styles.contain_carousel}>
 
           <div className={styles.carrousel_text}>
@@ -31,7 +31,7 @@ export default function Caroussel() {
         </div>
 
       </Carousel.Item>
-      <Carousel.Item interval={1000000}>
+      <Carousel.Item interval={500}>
       <div className={styles.contain_carousel}>
 
 <div className={styles.carrousel_text}>
@@ -55,7 +55,7 @@ export default function Caroussel() {
 </div>
 
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item interval={500}>
       <div className={styles.contain_carousel}>
 
 <div className={styles.carrousel_text}>

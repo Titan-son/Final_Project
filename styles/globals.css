@@ -35,7 +35,5 @@ background-size: 0.9em !important;
 .carousel-indicators .active {
   width: 40px !important;
   background-color: rgb(50, 143, 123) !important ;
-  /* border-left: 20px !important;
-  border-right: 20px !important; */
   border-radius: 15px !important;
 }
