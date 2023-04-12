@@ -1,18 +1,23 @@
-import { useState } from "react"
-import { useDispatch } from "react-redux"
-import { login } from "@/Redux/authSlice"
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { login } from "@/Redux/authSlice";
+import { useRouter } from 'next/router';
+import Link from "next/link";
 
 const LoginForm = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const dispatch = useDispatch();
+    const router = useRouter();
 
     const handleSubmit = (e) => {
 
         e.preventDefault();
         // Valider l'authentification de l'utilisateur (à implémenter)
         dispatch(login());
+
+        router.push('/');
     };
 
     return (
@@ -36,7 +41,13 @@ const LoginForm = () => {
         required
             />
             <br />
-            <button type="submit">Login</button>
+            { (password.length > 5 && email.length > 5 && email.includes('@'))? 
+            <Link href="/">
+            <button >Login</button>
+            </Link>:
+            <Link href="LoginForm/">
+            <button >Login</button>
+            </Link>}
         </form>
     );
 

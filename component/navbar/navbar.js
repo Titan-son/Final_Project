@@ -5,6 +5,7 @@ import { HiOutlineMagnifyingGlass } from "react-icons/hi2";
 import { FiPhoneCall } from "react-icons/fi";
 import { BsBag } from "react-icons/bs";
 import { AiFillHeart } from "react-icons/ai";
+import Link from 'next/link';
 
 
 
@@ -70,6 +71,10 @@ export default function Navbar() {
                 <span onClick={toggleFavoris}>
                     <AiFillHeart  className={styles.logo2}/>
                 </span>
+                <Link href="/login">
+                        <span>Login</span>
+                </Link>
+
                 <div className={isOpenFavoris ? styles.favoris + ' ' + styles.open : styles.favoris}>
                     <div className={styles.zone_titre}>
                         <h2>FAVORIS</h2>

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import LoginForm from "../LoginForm/LoginFrom";
+import LoginForm from "@/component/LoginForm/LoginForm";
 
 const LoginPage = () => {
     return (
