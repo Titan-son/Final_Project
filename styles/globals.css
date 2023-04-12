@@ -1,6 +1,6 @@
 body{
   margin: 0;
-
+  overflow-x: hidden;
 }
 
 .carousel-control-next-icon{
@@ -37,3 +37,5 @@ background-size: 0.9em !important;
   background-color: rgb(50, 143, 123) !important ;
   border-radius: 15px !important;
 }
+
+

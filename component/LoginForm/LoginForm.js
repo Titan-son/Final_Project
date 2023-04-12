@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { login } from "@/Redux/authSlice";
 import { useRouter } from 'next/router';
 import Link from "next/link";
+import styles from './LoginForm.module.css'
 
 const LoginForm = () => {
 
@@ -23,7 +24,8 @@ const LoginForm = () => {
     return (
 
         <form onSubmit={handleSubmit}>
-            <label htmlFor="email">Email:</label>
+            <div className={styles.div_login}>
+                <label htmlFor="email">Email:</label>
             <input
         type="email"
         id="email"
@@ -45,9 +47,11 @@ const LoginForm = () => {
             <Link href="/">
             <button >Login</button>
             </Link>:
-            <Link href="LoginForm/">
+            <Link href="/login">
             <button >Login</button>
             </Link>}
+            </div>
+            
         </form>
     );
 

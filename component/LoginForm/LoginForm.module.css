@@ -1,0 +1,31 @@
+.div_login{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: #558a6e79;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px ;
+    padding: 20px;
+}
+
+.div_login input{
+ width: 200px;
+ border-radius: 5px;
+ border: solid 1px gray;
+}
+
+.div_login button{
+
+    width: 70px;
+    padding: 5px;
+    background-color: #558a6e;
+    border-radius: 5px;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.div_login button:hover{
+
+background-color: #3d6550 ;
+}

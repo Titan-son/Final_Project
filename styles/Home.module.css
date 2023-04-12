@@ -265,6 +265,32 @@
   height: 400px;
 }
 
+/* css de la page login */
+
+.div_log{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.div_log h1{
+
+  color: white;
+
+}
+
+.contain_login{
+
+background-image: url(../public/img/backround/02.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
 
 /* media query des cards */
 
