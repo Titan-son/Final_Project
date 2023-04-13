@@ -1,0 +1,28 @@
+.Div_pub{
+    display: flex;
+    justify-content: space-around;
+    padding: 5vw;
+    margin: 10px;
+    gap: 20px;
+}
+
+
+.Card{
+    display: flex;
+    border: solid 1px grey;
+    border-radius: 5px;
+    gap: 20px;
+}
+
+.CardsImage image{
+    width: 200px;
+    height: 300px;
+}
+
+.pub_ecrit{
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+
+}

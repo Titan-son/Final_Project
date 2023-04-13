@@ -1,15 +1,9 @@
 .contain_all{
     display: flex;
     justify-content: space-around;
-    padding-top: 120px;
-    padding-bottom: 100px;
+    padding: 150px 0px 100px 0px;
 }
 
-.category_All_Book{
-
-    
-
-}
 
 .book_card{
 width: 250px;

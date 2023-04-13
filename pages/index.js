@@ -4,12 +4,14 @@ import { AiFillStar } from "react-icons/ai";
 import styles from '@/styles/Home.module.css';
 import Navbar, { toggleFavorite } from '@/component/navbar/navbar';
 import Caroussel from '@/component/Caroussel/caroussel';
-import Footer from '@/component/Footer/Footer';
+// import Footer from '@/component/Footer/Footer';
 import Community from '@/component/Community/Community';
+import Pub from '@/component/Pub/Pub';
 import { Button, Card } from 'react-bootstrap';
 import { useState } from 'react';
 import AuthRedirect from '@/component/Authredirect/Authredirect';
 import { useRouter } from 'next/router';
+
 
 export async function getStaticProps() {
   const allJsonData = await fetch('https://example-data.draftbit.com/books')
@@ -50,6 +52,7 @@ export default function Home({ allJsonData }) {
       </Head>
       <Navbar />
       <Caroussel />
+<Pub/>
 
       <div className={styles.title_bibliotheque}>
         <h3>Books Gallery</h3>

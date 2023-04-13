@@ -86,14 +86,14 @@ export default function Navbar() {
                 </div>
                 <div className={isOpen ? styles.menu + ' ' + styles.open : styles.menu}>
                     <div className={styles.zone_titre}>
-                        <h2>BOOKSHELF.</h2>
+                        <Link style={{ textDecoration: 'none', color:'black' }} href="/"><h2 onClick={toggleMenu}>BOOKSHELF.</h2></Link>
                         <CloseButton onClick={toggleMenu} />
                     </div>
 
                     <a className={styles.menu_item} onClick={toggleMenu}>Bookshelf Minimal</a>
                     <a className={styles.menu_item} onClick={toggleMenu}>Bookshelf Modern</a>
                     <a className={styles.menu_item} onClick={toggleMenu}>Bookshelf Classic</a>
-                    <Link href="/Allbooks/AllBooks">
+                    <Link style={{ textDecoration: 'none', color:'black' }} href="/Allbooks/AllBooks">
                         <span className={styles.menu_item} onClick={toggleMenu}>All Books</span>
                     </Link>
 
