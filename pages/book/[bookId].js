@@ -31,31 +31,31 @@ const BookDetails = () => {
 
 
     const handlePrevBook = () => {
-        const prevBookId = parseInt(bookId) -1;
+        const prevBookId = parseInt(bookId) - 1;
         router.push(`/book/${prevBookId}`);
     };
 
     const handleNextBook = () => {
-        const nextBookId = parseInt(bookId) +1;
+        const nextBookId = parseInt(bookId) + 1;
         router.push(`/book/${nextBookId}`);
     };
 
     const handleBackToHome = () => {
         router.push('/');
-      };
+    };
 
     return (
         <div className={styles.contain_container_book}>
             <div className={styles.contain_info_book}>
                 <div>
                     <h1 className={styles.title_book}> {bookDetails.title}</h1>
-                    
+
                 </div>
 
                 <div>
                     <img src={bookDetails.image_url} alt={bookDetails.title} />
                 </div>
-<br />
+                <br />
                 <div className={styles.text_book}>
                     <b> {bookDetails.authors}</b>
                     <p> {bookDetails.description} </p>
@@ -63,16 +63,16 @@ const BookDetails = () => {
                 </div>
             </div>
 
-<div className={styles.div_book_change}>
+            <div className={styles.div_book_change}>
 
-<button className={styles.btn_book} onClick={handlePrevBook}>Précedent Livre</button>
-<button className={styles.btn_book} onClick={handleNextBook}>Prochain Livre</button>
+                <button className={styles.btn_book} onClick={handlePrevBook}>Previous Book</button>
+                <button className={styles.btn_book} onClick={handleNextBook}>Next Book</button>
 
-</div>
+            </div>
 
-<div className={styles.div_back_home}>
-<button className={styles.btn_book} onClick={handleBackToHome}>retour au home </button>
-</div>
+            <div className={styles.div_back_home}>
+                <button className={styles.btn_book} onClick={handleBackToHome}> Menu home </button>
+            </div>
 
         </div>
     );

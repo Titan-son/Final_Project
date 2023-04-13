@@ -1,0 +1,25 @@
+.errorContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  .errorTitle {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .errorMessage {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .errorLink {
+    font-size: 1.2rem;
+    color: blue;
+    text-decoration: underline;
+  }

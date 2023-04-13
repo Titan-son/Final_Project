@@ -1,6 +1,13 @@
+@font-face {
+  font-family: Roboto ;
+  src: url("../public/font/Roboto2.otf");
+}
+
 body{
   margin: 0;
   overflow-x: hidden;
+  /* font-family: 'Roboto' !important; */
+  
 }
 
 .carousel-control-next-icon{

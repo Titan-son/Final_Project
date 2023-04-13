@@ -231,6 +231,15 @@
 
 /* Cartes des livres */
 
+.title_bibliotheque{
+padding-top: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 5px;
+}
+
 .bibliotheque {
   display: flex;
   flex-wrap: wrap;
@@ -256,6 +265,10 @@
 
 .etoile{
   color: #ffb73b;
+}
+
+.btn_load{
+  background-color: #558a6e;;
 }
 
 /* image de la card */
