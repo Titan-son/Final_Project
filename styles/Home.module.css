@@ -263,6 +263,7 @@
 .img_card{
   width: 100%;
   height: 400px;
+  cursor: pointer;
 }
 
 /* css de la page login */

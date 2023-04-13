@@ -9,6 +9,7 @@ import Community from '@/component/Community/Community';
 import { Button, Card } from 'react-bootstrap';
 import { useState } from 'react';
 import AuthRedirect from '@/component/Authredirect/Authredirect';
+import { useRouter } from 'next/router';
 
 export async function getStaticProps() {
   const allJsonData = await fetch('https://example-data.draftbit.com/books')
@@ -23,6 +24,12 @@ export async function getStaticProps() {
 export default function Home({ allJsonData }) {
   const [visibleCards, setVisibleCards] = useState(8);
   const [additionalCards, setAdditionalCards] = useState(0);
+  const router = useRouter();
+
+
+  const handleCardClick = (bookId) => {
+    router.push(`/book/${bookId}`);
+  };
 
   const loadMoreBooks = () => {
     if (additionalCards < 8) {
@@ -49,7 +56,7 @@ export default function Home({ allJsonData }) {
             .slice(0, visibleCards)
             .map((book, index) => (
               <Card key={index} style={{ width: '18rem', marginBottom: '1rem' }}>
-                {book.image_url && <Card.Img variant="top" src={book.image_url} className={styles.img_card} />}
+                {book.image_url && <Card.Img variant="top" src={book.image_url} className={styles.img_card} data-book-id={book.id}  onClick={() =>handleCardClick(book.id)}/>}
                 <Card.Body>
                   <Card.Title>{book.title}</Card.Title>
                   <Card.Text className={styles.author}>{book.authors}</Card.Text>

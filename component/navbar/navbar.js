@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { RxCross2 } from "react-icons/rx";
 import { HiOutlineMagnifyingGlass } from "react-icons/hi2";
 import { FiPhoneCall } from "react-icons/fi";
-import { BsBag } from "react-icons/bs";
 import { AiFillHeart } from "react-icons/ai";
 import Link from 'next/link';
 
@@ -20,12 +19,16 @@ export default function Navbar() {
     );
 
     const [isOpen, setIsOpen] = useState(false);
+    const [isOpenFavoris, setIsOpenFavoris] = useState(false);
+    const [searchText, setSearchText] = useState('');
+    const [allBooks, setAllBooks] = useState([]);
+    const [filteredBooks, setFilteredBooks] = useState([]);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
 
-    const [isOpenFavoris, setIsOpenFavoris] = useState(false);
+    
 
     const toggleFavoris = () => {
         setIsOpenFavoris(!isOpenFavoris);
