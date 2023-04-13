@@ -8,7 +8,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 
-    
+
 
 
 
@@ -50,16 +50,16 @@ export default function Navbar() {
         setFilteredBooks(results);
     }, [searchText, allBooks]);
 
- const toggleFavorite = (book) => {
-    const isFavorite = favorites.some((favorite) => favorite.id === book.id);
-    if (isFavorite) {
-      setFavorites((prevFavorites) =>
-        prevFavorites.filter((favorite) => favorite.id !== book.id)
-      );
-    } else {
-      setFavorites((prevFavorites) => [...prevFavorites, book]);
-    }
-  };
+    const toggleFavorite = (book) => {
+        const isFavorite = favorites.some((favorite) => favorite.id === book.id);
+        if (isFavorite) {
+            setFavorites((prevFavorites) =>
+                prevFavorites.filter((favorite) => favorite.id !== book.id)
+            );
+        } else {
+            setFavorites((prevFavorites) => [...prevFavorites, book]);
+        }
+    };
 
 
     const toggleMenu = () => {
@@ -93,7 +93,10 @@ export default function Navbar() {
                     <a className={styles.menu_item} onClick={toggleMenu}>Bookshelf Minimal</a>
                     <a className={styles.menu_item} onClick={toggleMenu}>Bookshelf Modern</a>
                     <a className={styles.menu_item} onClick={toggleMenu}>Bookshelf Classic</a>
-                    <a className={styles.menu_item} onClick={toggleMenu}>All Books</a>
+                    <Link href="/Allbooks/AllBooks">
+                        <span className={styles.menu_item} onClick={toggleMenu}>All Books</span>
+                    </Link>
+
                 </div>
                 <h2>BOOKSHELF.</h2>
             </div>

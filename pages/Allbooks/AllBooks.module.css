@@ -1,0 +1,39 @@
+.contain_all{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 120px;
+}
+
+.contain_all{
+
+display: flex;
+flex-wrap: wrap;
+
+}
+
+.book_card{
+width: 250px;
+border: solid 3px rgba(147, 147, 147, 0.502);
+border-radius: 5px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+margin: 0px 40px;
+}
+
+.book_card img {
+    width: 150px;
+    height: 220px ;
+}
+
+.card_book{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    width: 75%;
+    height: 400px;
+    overflow-y: scroll;
+    margin: auto;
+}
