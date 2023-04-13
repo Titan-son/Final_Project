@@ -1,11 +1,13 @@
 import React from 'react'
 import styles from './AllBooks.module.css'
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 
 export async function getStaticProps() {
     const res = await fetch('https://example-data.draftbit.com/books');
     const data = await res.json();
+    
 
     const allAuthors = [...new Set(data.filter(book => book.authors).map(book => book.authors))];
 
@@ -48,6 +50,12 @@ export default function AllBooks({ data, allAuthors }) {
         ? filteredBooksBySearch.filter((book) => book.authors === selectedAuthor)
         : filteredBooksBySearch;
 
+        const router = useRouter();
+
+        const handleCardClick = (bookId) => {
+            router.push(`/book/${bookId}`);
+          };
+
     return (
         <div>
             <div className={styles.contain_all}>
@@ -84,9 +92,6 @@ export default function AllBooks({ data, allAuthors }) {
                             ))}
                         </select>
 
-                        <div className={styles.Title}>
-                            <h2>Price</h2>
-                        </div>
 
                     </div>
 
@@ -94,8 +99,8 @@ export default function AllBooks({ data, allAuthors }) {
 
                 <div className={styles.card_book}>
                     {filteredBooks.map((book, index) => (
-                        <div key={index} className={styles.book_card}>
-                            <img src={book.image_url} alt={book.title} className={styles.book_image} />
+                        <div key={index + book.id} className={styles.book_card}>
+                            <img src={book.image_url} alt={book.title} className={styles.book_image} data-book-id={book.id} onClick={() => handleCardClick(book.id)} />
                             <h3>{book.title}</h3>
                             <p>{book.authors}</p>
                             <p>Rating: {book.rating}</p>

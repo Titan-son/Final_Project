@@ -22,7 +22,7 @@ const BookDetails = () => {
     }, [bookId]);
 
     if (!bookDetails) {
-        return <div>Loading...</div>;
+        return <div className={styles.loader}></div>;
     }
 
     const genres = bookDetails.genres && Array.isArray(bookDetails.genres) ? bookDetails.genres.join(', ') : 'N/A';

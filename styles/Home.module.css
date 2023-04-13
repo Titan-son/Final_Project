@@ -232,12 +232,17 @@
 /* Cartes des livres */
 
 .title_bibliotheque{
-padding-top: 50px;
+padding-top: 10px;
+padding-bottom: 20px;
 display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
 gap: 5px;
+}
+
+.title_bibliotheque h3{
+  color: #558a6e;
 }
 
 .bibliotheque {

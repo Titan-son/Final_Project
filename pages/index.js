@@ -56,7 +56,7 @@ export default function Home({ allJsonData }) {
 
       <div className={styles.title_bibliotheque}>
         <h3>Books Gallery</h3>
-        <h1>popular Books</h1>
+        <h1>Popular Books</h1>
       </div>
       <div className={styles.bibliotheque}>
         <div className={styles.container_card}>
