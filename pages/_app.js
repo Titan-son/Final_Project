@@ -7,7 +7,7 @@ import store from '../Redux/store';
 export default function App({ Component, pageProps }) {
   return (
     <Provider store={store}>
-      <Navbar/>
+      {/* <Navbar/> */}
     <Component {...pageProps} />
     <Footer/>
   </Provider>

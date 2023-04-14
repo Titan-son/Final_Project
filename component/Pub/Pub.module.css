@@ -4,6 +4,8 @@
     padding: 5vw;
     margin: 10px;
     gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 
@@ -25,4 +27,10 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 
+}
+
+@media (max-width: 520px) {
+    .Div_pub{
+        width: 50%;
+    }
 }

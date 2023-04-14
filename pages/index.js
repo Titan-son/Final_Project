@@ -50,7 +50,6 @@ export default function Home({ allJsonData }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
       <Caroussel />
 <Pub/>
 
@@ -64,7 +63,7 @@ export default function Home({ allJsonData }) {
             .sort((a, b) => b.rating - a.rating)
             .slice(0, visibleCards)
             .map((book, index) => (
-              <Card key={index + book.id} style={{ width: '18rem', marginBottom: '1rem' }}>
+              <Card className={styles.oneCard} key={index + book.id} style={{ width: '18rem', marginBottom: '1rem' }}>
                 {book.image_url && <Card.Img variant="top" src={book.image_url} className={styles.img_card} data-book-id={book.id} onClick={() => handleCardClick(book.id)} />}
                 <Card.Body>
                   <Card.Title>{book.title}</Card.Title>

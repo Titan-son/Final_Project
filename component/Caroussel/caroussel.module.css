@@ -5,6 +5,7 @@
   padding: 50px 10%;
   background-color: #f8f9fa;
   margin-top: 100px ;
+  width: 100%;
 }
 
 .carousel-item {
@@ -15,7 +16,7 @@
 .carousel-item .image_carousel {
   width: 50%;
   height: auto;
-
+  
 }
 
 
@@ -51,3 +52,15 @@ border-radius: 5px;
 .mini_titre{
   color: rgb(50, 143, 123);
 }
+
+@media (max-width: 520px) {
+  .contain_carousel{
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  .carrousel_text {
+    width: 100%;
+  }
+}
+
+
